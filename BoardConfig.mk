@@ -23,7 +23,7 @@ BOARD_USES_GENERIC_AUDIO := false
 BOARD_USES_LIBSECRIL_STUB := true
 
 # Use the non-open-source parts, if they're present
--include vendor/samsung/fascinatemtd/BoardConfigVendor.mk
+-include vendor/samsung/mesmerizemtd/BoardConfigVendor.mk
 
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
@@ -44,8 +44,8 @@ BOARD_MOBILEDATA_INTERFACE_NAME := "ppp0"
 BOARD_UMS_LUNFILE := /sys/class/android_usb/android0/f_mass_storage/lun/file
 
 # Releasetools
-TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/samsung/fascinatemtd/releasetools/fascinatemtd_ota_from_target_files
-TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := ./device/samsung/fascinatemtd/releasetools/fascinatemtd_img_from_target_files
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/samsung/mesmerizemtd/releasetools/mesmerizemtd_ota_from_target_files
+TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := ./device/samsung/mesmerizemtd/releasetools/mesmerizemtd_img_from_target_files
 
 # Hardware rendering
 USE_OPENGL_RENDERER := true
@@ -74,7 +74,7 @@ BOARD_NAND_SPARE_SIZE := 128
 BOARD_KERNEL_BASE := 0x32000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_CMDLINE := console=ttyFIQ0,115200 init=/init no_console_suspend
-TARGET_PREBUILT_KERNEL := device/samsung/fascinatemtd/kernel
+TARGET_PREBUILT_KERNEL := device/samsung/mesmerizemtd/kernel
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 7864320
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 262144000
@@ -104,7 +104,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/aries-common/recovery/graphics.c
 BOARD_USES_BML_OVER_MTD := true
-BOARD_CUSTOM_BOOTIMG_MK := device/samsung/fascinatemtd/shbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/samsung/mesmerizemtd/shbootimg.mk
 TARGET_RECOVERY_PRE_COMMAND := "echo 1 > /cache/.startrecovery; sync;"
 
-TARGET_OTA_ASSERT_DEVICE := aries,fascinate,fascinatemtd,SCH-I500
+TARGET_OTA_ASSERT_DEVICE := aries,mesmerize,mesmerizemtd,SCH-I500
