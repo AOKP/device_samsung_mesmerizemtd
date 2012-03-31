@@ -42,19 +42,19 @@ DEVICE_PACKAGE_OVERLAYS := device/samsung/mesmerizemtd/overlay
 
 # These are the hardware-specific configuration files
 PRODUCT_COPY_FILES := \
-	device/samsung/mesmerizemtd/asound.conf:system/etc/asound.conf \
-	device/samsung/mesmerizemtd/vold.fstab:system/etc/vold.fstab \
+	device/samsung/fascinatemtd/asound.conf:system/etc/asound.conf \
+	device/samsung/fascinatemtd/vold.fstab:system/etc/vold.fstab \
 	device/samsung/aries-common/egl.cfg:system/lib/egl/egl.cfg \
 	device/samsung/aries-common/mxt224_ts_input.idc:system/usr/idc/mxt224_ts_input.idc \
 	device/samsung/aries-common/main.conf:system/etc/bluetooth/main.conf
 
 # Init files
 PRODUCT_COPY_FILES += \
-	device/samsung/mesmerizemtd/init.aries.rc:root/init.aries.rc \
+	device/samsung/fascinatemtd/init.aries.rc:root/init.aries.rc \
 	device/samsung/aries-common/init.aries.usb.rc:root/init.aries.usb.rc \
 	device/samsung/aries-common/init.aries.usb.rc:recovery/root/usb.rc \
 	device/samsung/aries-common/lpm.rc:root/lpm.rc \
-	device/samsung/mesmerizemtd/ueventd.aries.rc:root/ueventd.aries.rc \
+	device/samsung/fascinatemtd/ueventd.aries.rc:root/ueventd.aries.rc \
 	device/samsung/aries-common/setupdatadata.sh:root/sbin/setupdatadata.sh \
 	bootable/recovery/nandroid-md5.sh:recovery/root/sbin/nandroid-md5.sh
 
@@ -62,7 +62,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	device/samsung/aries-common/cypress-touchkey.kl:system/usr/keylayout/cypress-touchkey.kl \
 	device/samsung/aries-common/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
-	device/samsung/mesmerizemtd/aries-keypad.kl:system/usr/keylayout/aries-keypad.kl \
+	device/samsung/fascinatemtd/aries-keypad.kl:system/usr/keylayout/aries-keypad.kl \
 	device/samsung/aries-common/s3c-keypad.kl:system/usr/keylayout/s3c-keypad.kl
 
 # Generated kcm keymaps
@@ -203,11 +203,11 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 # kernel modules
 PRODUCT_COPY_FILES += $(foreach module,\
-	$(wildcard device/samsung/mesmerizemtd/*.ko),\
+	$(wildcard device/samsung/fascinatemtd/*.ko),\
 	$(module):system/lib/modules/$(notdir $(module)))
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-    LOCAL_KERNEL := device/samsung/mesmerizemtd/kernel
+    LOCAL_KERNEL := device/samsung/fascinatemtd/kernel
 else
     LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
