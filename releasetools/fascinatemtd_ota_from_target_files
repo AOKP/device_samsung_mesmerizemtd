@@ -82,13 +82,6 @@ def WriteFullOTAPackage(input_zip, output_zip):
   if OPTIONS.wipe_user_data:
     script.FormatPartition("/data")
 
-  script.Print(" ")
-  script.Print("        ___  __  __  __  __  __  __  _  _  ")
-  script.Print("       / __)(  )(  )(  \/  )(  \/  )( \/ ) ")
-  script.Print("      ( (_-. )(__)(  )    (  )    (  \  /  ")
-  script.Print("       \___/(______)(_/\/\_)(_/\/\_) (__)  ")
-  script.Print(" ")
-  
   script.FormatPartition("/system")
   script.Mount("/system")
   script.ShowProgress(0.7, 30);
@@ -104,15 +97,8 @@ def WriteFullOTAPackage(input_zip, output_zip):
     script.UndoRetouchBinaries(retouch_files)
 
   Item.GetMetadata(input_zip)
-
   script.ShowProgress(0.15, 5)
   Item.Get("system").SetPermissions(script)
-
-
-  script.SetPermissionsRecursive("/system/etc/init.d", 0, 0, 0755, 0555)
-  script.SetPermissions("/system/bin/su", 0, 0, 06755)
-  script.SetPermissions("/data/cron", 0, 0, 0755)
-  script.SetPermissions("/data/cron/root", 0, 0, 0644)  
 
   CopyBootFiles(input_zip, output_zip)
   CopyBMLoverMTD(output_zip)
