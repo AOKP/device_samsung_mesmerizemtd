@@ -115,7 +115,7 @@ PRODUCT_PACKAGES += \
 
 # apns
 PRODUCT_COPY_FILES += \
-	development/data/etc/apns-conf.xml:system/etc/apns-conf.xml
+	vendor/aokp/prebuilt/mesmerizemtd/apns-conf.xml:system/etc/apns-conf.xml
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
