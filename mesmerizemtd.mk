@@ -115,7 +115,7 @@ PRODUCT_PACKAGES += \
 
 # apns
 PRODUCT_COPY_FILES += \
-	vendor/aokp/prebuilt/mesmerizemtd/apns-conf.xml:system/etc/apns-conf.xml
+	development/data/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -166,8 +166,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # be reachable from resources or other mechanisms.
 PRODUCT_PROPERTY_OVERRIDES += \
        wifi.interface=wlan0 \
-       wifi.supplicant_scan_interval=20 \
-       dalvik.vm.heapsize=48m
+       wifi.supplicant_scan_interval=180
+
+# Dalvik heap size
+include frameworks/base/build/phone-hdpi-512-dalvik-heap.mk
+
 
 # enable Google-specific location features,
 # like NetworkLocationProvider and LocationCollector
