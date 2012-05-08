@@ -1,0 +1,9 @@
+aokp.per_app_scaling=1
+aokp.system_default_dpi=150
+aokp.user_default_dpi=200
+
+aokp.Phone.dd=240
+aokp.GoogleQuickSearchBox.dd=240
+aokp.inputmethod.latin.ported.dd=128
+aokp.com.swype.android.inputmethod.dd=128
+aokp.com.anddoes.launcher.dd=130

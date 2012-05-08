@@ -218,6 +218,10 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
+#aokp.Prop
+PRODUCT_COPY_FILES += \
+    device/samsung/mesmerizemtd/aokp.unicorn:system/aokp.unicorn
+
 PRODUCT_COPY_FILES += \
     device/samsung/aries-common/updater.sh:updater.sh
 
