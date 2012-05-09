@@ -2,8 +2,8 @@
 aokp.per_app_scaling=1
 
 # Default Densities for System/app and Data/app folders
-aokp.system_default_dpi=190
-aokp.user_default_dpi=190
+aokp.system_default_dpi=200
+aokp.user_default_dpi=200
 
 # These apps don't play well leave this densities alone.
 aokp.Phone.dd=240
