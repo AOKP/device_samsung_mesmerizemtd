@@ -18,6 +18,8 @@ aokp.Talk.dd=128
 aokp.SystemUI.dd=166
 aokp.Settings.dd=155
 aokp.ROMControl.dd=155
+aokp.Camera.dd=128
+aokp.Contacts.dd=150
 
 # Add your custom apps here. Don't forget to save this 
 # prop somewhere on your SDcard.
