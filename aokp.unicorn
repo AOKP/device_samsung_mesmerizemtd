@@ -1,9 +1,23 @@
+# Turns on Custom Densities Don't touch.
 aokp.per_app_scaling=1
-aokp.system_default_dpi=150
-aokp.user_default_dpi=200
 
+# Default Densities for System/app and Data/app folders
+aokp.system_default_dpi=190
+aokp.user_default_dpi=190
+
+# These apps don't play well leave this densities alone.
 aokp.Phone.dd=240
-aokp.GoogleQuickSearchBox.dd=240
-aokp.inputmethod.latin.ported.dd=128
+aokp.GoogleQuickSearchBox.dd=200
+aokp.LatinIME.dd=128
 aokp.com.swype.android.inputmethod.dd=128
-aokp.com.anddoes.launcher.dd=130
+aokp.ApexLauncher.dd=149
+aokp.NovaLauncher.dd=149
+aokp.Talk.dd=128
+
+# Recommended but you can change. 
+aokp.SystemUI.dd=166
+aokp.Settings.dd=155
+aokp.ROMControl.dd=155
+
+# Add your custom apps here. Don't forget to save this 
+# prop somewhere on your SDcard.
