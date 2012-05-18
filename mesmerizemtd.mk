@@ -204,26 +204,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
-# kernel modules
-PRODUCT_COPY_FILES += $(foreach module,\
-	$(wildcard device/samsung/fascinatemtd/*.ko),\
-	$(module):system/lib/modules/$(notdir $(module)))
-
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-    LOCAL_KERNEL := device/samsung/fascinatemtd/kernel
-else
-    LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
+    device/samsung/aries-common/updater.sh:updater.sh
 
 #aokp.Prop
 PRODUCT_COPY_FILES += \
     device/samsung/mesmerizemtd/aokp.unicorn:system/aokp.unicorn
-
+    
+# TWRP Recovery
 PRODUCT_COPY_FILES += \
-    device/samsung/aries-common/updater.sh:updater.sh
+    device/samsung/fascinatemtd/ramdisk-recovery.img:utilities/ramdisk-recovery.img
 
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
 

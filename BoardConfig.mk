@@ -74,7 +74,10 @@ BOARD_NAND_SPARE_SIZE := 128
 BOARD_KERNEL_BASE := 0x32000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_CMDLINE := console=ttyFIQ0,115200 init=/init no_console_suspend
-TARGET_PREBUILT_KERNEL := device/samsung/fascinatemtd/kernel
+
+# Kernel Config
+TARGET_KERNEL_SOURCE := kernel/samsung/aries
+TARGET_KERNEL_CONFIG := cyanogenmod_fascinatemtd_defconfig
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 7864320
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 262144000
