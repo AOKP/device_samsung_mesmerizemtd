@@ -211,10 +211,6 @@ PRODUCT_COPY_FILES += \
 #aokp.Prop
 PRODUCT_COPY_FILES += \
     device/samsung/mesmerizemtd/aokp.unicorn:system/aokp.unicorn
-    
-# TWRP Recovery
-PRODUCT_COPY_FILES += \
-    device/samsung/fascinatemtd/ramdisk-recovery.img:utilities/ramdisk-recovery.img
 
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
 
