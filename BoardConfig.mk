@@ -46,6 +46,7 @@ BOARD_UMS_LUNFILE := /sys/class/android_usb/android0/f_mass_storage/lun/file
 # Releasetools
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/samsung/fascinatemtd/releasetools/fascinatemtd_ota_from_target_files
 TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := ./device/samsung/fascinatemtd/releasetools/fascinatemtd_img_from_target_files
+TARGET_CUSTOM_RELEASETOOL := ./device/samsung/mesmerizemtd/releasetools/squisher
 
 # Hardware rendering
 USE_OPENGL_RENDERER := true
