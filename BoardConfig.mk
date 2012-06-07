@@ -46,7 +46,6 @@ BOARD_UMS_LUNFILE := /sys/class/android_usb/android0/f_mass_storage/lun/file
 # Releasetools
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/samsung/fascinatemtd/releasetools/fascinatemtd_ota_from_target_files
 TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := ./device/samsung/fascinatemtd/releasetools/fascinatemtd_img_from_target_files
-TARGET_CUSTOM_RELEASETOOL := ./device/samsung/mesmerizemtd/releasetools/squisher
 
 # Hardware rendering
 USE_OPENGL_RENDERER := true
@@ -79,6 +78,7 @@ BOARD_KERNEL_CMDLINE := console=ttyFIQ0,115200 init=/init no_console_suspend
 # Kernel Config
 TARGET_KERNEL_SOURCE := kernel/samsung/aries
 TARGET_KERNEL_CONFIG := cyanogenmod_fascinatemtd_defconfig
+TARGET_PREBUILT_KERNEL := device/samsung/fascinatemtd/kernel
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 7864320
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 262144000
